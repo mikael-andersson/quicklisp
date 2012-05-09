@@ -1,0 +1,12 @@
+#+xcvb
+(module
+ (:fullname
+  "fare-matcher"
+  :depends-on
+  ("packages" "matcher"
+   "quasiquote" "pp-quasiquote" "quasiquote-readtable"
+   "clos-match" "mrd-extensions")
+  :build-depends-on
+  ("fare-utils")
+  :supersedes-asdf
+  ("fare-matcher" "fare-quasiquote-readtable")))
