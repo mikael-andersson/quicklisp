@@ -1,1 +1,1 @@
-dists/quicklisp/software/fare-memoization-20120305-git/
+dists/quicklisp/software/fare-memoization-20120407-git/

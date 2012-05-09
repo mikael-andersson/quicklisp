@@ -1,1 +1,0 @@
-dists/quicklisp/software/metatilities-base-20120307-git/metatilities-base-test.asd
