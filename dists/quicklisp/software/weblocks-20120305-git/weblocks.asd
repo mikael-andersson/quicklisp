@@ -117,6 +117,7 @@
 					types
 					:components ((:file "file-upload")
                                                      (:file "us-states")
+                                                     (:file "hsn")
 						     (:file "boolean")
 						     (:file "member"
 							    :depends-on (presentations parsers))
