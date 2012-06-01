@@ -1,1 +1,1 @@
-dists/quicklisp/software/weblocks-20120305-git/src/store/memory/weblocks-memory.asd
+dists/quicklisp/software/weblocks-20120520-git/src/store/memory/weblocks-memory.asd

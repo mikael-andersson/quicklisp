@@ -1,1 +1,1 @@
-dists/quicklisp/software/weblocks-20120305-git/weblocks-scripts.asd
+dists/quicklisp/software/weblocks-20120520-git/weblocks-scripts.asd

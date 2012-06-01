@@ -1,1 +1,1 @@
-dists/quicklisp/software/weblocks-20120305-git/examples/simple-blog/simple-blog.asd
+dists/quicklisp/software/weblocks-20120520-git/examples/simple-blog/simple-blog.asd

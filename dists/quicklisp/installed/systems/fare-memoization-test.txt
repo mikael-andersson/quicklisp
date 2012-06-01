@@ -1,1 +1,1 @@
-dists/quicklisp/software/fare-memoization-20120407-git/fare-memoization-test.asd
+dists/quicklisp/software/fare-memoization-20120520-git/fare-memoization-test.asd

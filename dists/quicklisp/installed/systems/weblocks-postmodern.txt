@@ -1,1 +1,1 @@
-dists/quicklisp/software/weblocks-20120305-git/src/store/postmodern/weblocks-postmodern.asd
+dists/quicklisp/software/weblocks-20120520-git/src/store/postmodern/weblocks-postmodern.asd
