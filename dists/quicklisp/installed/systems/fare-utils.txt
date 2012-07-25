@@ -1,1 +1,1 @@
-dists/quicklisp/software/fare-utils-20120520-git/fare-utils.asd
+dists/quicklisp/software/fare-utils-20120703-git/fare-utils.asd

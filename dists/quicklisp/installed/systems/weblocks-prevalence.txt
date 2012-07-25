@@ -1,1 +1,1 @@
-dists/quicklisp/software/weblocks-20120520-git/src/store/prevalence/weblocks-prevalence.asd
+dists/quicklisp/software/weblocks-20120703-git/src/store/prevalence/weblocks-prevalence.asd

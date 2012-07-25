@@ -1,1 +1,1 @@
-dists/quicklisp/software/linedit-20120520-git/terminfo.asd
+dists/quicklisp/software/linedit-20120703-git/terminfo.asd
