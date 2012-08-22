@@ -1,0 +1,2 @@
+drakma/drakma.asd
+cl-selenium-0.4/selenium.asd
