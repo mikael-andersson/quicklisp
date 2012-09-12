@@ -1,1 +1,1 @@
-dists/quicklisp/software/weblocks-20120703-git/
+dists/quicklisp/software/weblocks-20120909-git/
