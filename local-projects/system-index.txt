@@ -1,2 +1,3 @@
 drakma/drakma.asd
 cl-selenium-0.4/selenium.asd
+weblocks-filtering-widget/weblocks-filtering-widget.asd
