@@ -18,6 +18,7 @@
                         (slot-value object (sb-mop:slot-definition-name i))
                         "Unbound")))
           (list slot (if (getf filters slot) (funcall (getf filters slot) value) value)))))
+
 (defun get-css-border-radius (radius)
   (format nil "-webkit-border-radius: ~a; -moz-border-radius: ~a; border-radius: ~a;" radius radius radius))
 
@@ -150,7 +151,7 @@
 
 (defmethod render-filter-display ((widget filtering-widget) spec-plist)
   (with-html 
-    (:div :style "white-space:nowrap;padding-right:10px;"
+    (:div :style "white-space:nowrap;padding-right:30px;"
      (render-filter-display-value 
        widget
        (getf (find-form-field-by-id widget (getf spec-plist :field)) :caption)
@@ -174,24 +175,27 @@
         (:div :style "text-align:center;"
          (render-add-filter-link widget filter-id filter-type))))))
 
+(defun render-close-button (widget filter-type previous-filter-id)
+  (with-html 
+    (:a 
+      :href (add-get-param-to-url 
+              (add-get-param-to-url (make-action-url (slot-value widget 'remove-filter-action)) "id" (string previous-filter-id))
+              "filter-type"
+              (string filter-type))
+      :onclick (format nil 
+                       "initiateActionWithArgs(\"~A\", \"~A\", {id: \"~A\", \"filter-type\":\"~A\"});return false;"
+                       (slot-value widget 'remove-filter-action) (session-name-string-pair) previous-filter-id filter-type)
+      :href "" :style (append-css-border-radius "3px" "border:2px solid #dbeac1;text-decoration:none;font-size:16px;padding:0 5px;font-family:monospace;font-weight:bold;margin-bottom:10px;") "x")))
+
 (defmethod render-and-cells ((widget filtering-widget) filters &key (display-or t) previous-elem)
   (let ((previous)
         (filter filters))
     (with-html 
       (:div :style #-DEBUG(append-css-border-radius "5px" "border:1px solid #dbeac1;background-color:#ECF8D7") #+DEBUG"border:1px solid blue;"
-       (:div :style "float:right;padding:5px;"
+       (:div :style "float:right;padding:5px 5px 8px 5px;"
         (let ((previous-filter-id (getf (or previous-elem previous) :id))
               (filter-type (if previous-elem :or :and)))
-          (htm 
-            (:a 
-              :href (add-get-param-to-url 
-                      (add-get-param-to-url (make-action-url (slot-value widget 'remove-filter-action)) "id" (string previous-filter-id))
-                      "filter-type"
-                      (string filter-type))
-              :onclick (format nil 
-                               "initiateActionWithArgs(\"~A\", \"~A\", {id: \"~A\", \"filter-type\":\"~A\"});return false;"
-                               (slot-value widget 'remove-filter-action) (session-name-string-pair) previous-filter-id filter-type)
-              :href "" :style "text-decoration:none" "x"))))
+          (render-close-button widget filter-type previous-filter-id)))
        (:table :cellpadding 5 :cellspacing 0 :style "height:100%;margin:0 auto;"
         (:tr 
           (loop do 
@@ -200,17 +204,9 @@
                         (filter-type (if previous :and :or)))
                     (htm 
                       (:td :valign "top"
-                       (:div :style #-DEBUG(append-css-border-radius "5px" "border:1px solid #dbeac1;height:100%;padding:5px;") #+DEBUG"border:1px solid yellow;height:100%;padding:5px;"
+                       (:div :style #-DEBUG(append-css-border-radius "5px" "border:1px solid #dbeac1;height:100%;padding:5px 5px 8px 5px;") #+DEBUG"border:1px solid yellow;height:100%;padding:5px;"
                         (:div :style "float:right;" 
-                         (:a 
-                           :href (add-get-param-to-url 
-                                   (add-get-param-to-url (make-action-url (slot-value widget 'remove-filter-action)) "id" (string previous-filter-id))
-                                   "filter-type"
-                                   (string filter-type))
-                           :onclick (format nil 
-                                            "initiateActionWithArgs(\"~A\", \"~A\", {id: \"~A\", \"filter-type\":\"~A\"});return false;"
-                                            (slot-value widget 'remove-filter-action) (session-name-string-pair) previous-filter-id filter-type)
-                           :href "" :style "text-decoration:none" "x"))
+                         (render-close-button widget filter-type previous-filter-id))
                         (:div 
                           (render-filter-display 
                             widget (getf filter :value)))
