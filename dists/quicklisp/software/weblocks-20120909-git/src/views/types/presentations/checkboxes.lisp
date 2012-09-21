@@ -68,8 +68,8 @@
           (label (if (consp val) (car val) val))
           (value (if (consp val) (cdr val) val)))
     (with-html
-      (:input :name (attributize-name name) :type "checkbox" :id id :class class
-	      :checked checked-p :value value (str (humanize-name label)))))))
+      (:div (:input :name (attributize-name name) :type "checkbox" :id id :class class
+	      :checked checked-p :value value (str (humanize-name label))))))))
 
 (defmethod request-parameter-for-presentation (name (presentation checkboxes-presentation))
   (declare (ignore presentation))
