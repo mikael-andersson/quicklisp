@@ -1,0 +1,6 @@
+For information about respective project, see below references:
+
+cl-config: https://github.com/html/cl-config
+cl-selenium-0.4: see README
+drakma: http://weitz.de/drakma/
+weblocks-filtering-widget: https://github.com/html/weblocks-filtering-widget
