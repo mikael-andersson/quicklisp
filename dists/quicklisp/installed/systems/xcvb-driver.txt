@@ -1,1 +1,1 @@
-dists/quicklisp/software/xcvb-0.588/xcvb-driver.asd
+dists/quicklisp/software/xcvb-0.596/xcvb-driver.asd

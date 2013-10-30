@@ -1,1 +1,1 @@
-dists/quicklisp/software/fare-matcher-20120811-git/fare-matcher.asd
+dists/quicklisp/software/fare-matcher-20130128-git/fare-matcher.asd

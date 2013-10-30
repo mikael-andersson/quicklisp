@@ -263,6 +263,8 @@
            #:*quickload-prompt*
            #:*quickload-verbose*
            #:*quickload-explain*
+           #:system-not-found
+           #:system-not-found-name
            #:uninstall
            #:uninstall-dist
            #:qmerge
@@ -286,7 +288,8 @@
            #:local-projects-searcher
            #:*local-project-directories*
            #:list-local-projects
-           #:list-local-systems))
+           #:list-local-systems
+           #:who-depends-on))
 
 (in-package #:quicklisp-client)
 

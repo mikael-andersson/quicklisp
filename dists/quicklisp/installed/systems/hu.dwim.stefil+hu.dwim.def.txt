@@ -1,1 +1,1 @@
-dists/quicklisp/software/hu.dwim.stefil-20120909-darcs/hu.dwim.stefil+hu.dwim.def.asd
+dists/quicklisp/software/hu.dwim.stefil-20130813-darcs/hu.dwim.stefil+hu.dwim.def.asd

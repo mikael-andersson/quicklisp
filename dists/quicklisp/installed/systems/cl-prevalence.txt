@@ -1,1 +1,1 @@
-dists/quicklisp/software/cl-prevalence-20101207-hg/cl-prevalence.asd
+dists/quicklisp/software/cl-prevalence-20130720-hg/cl-prevalence.asd

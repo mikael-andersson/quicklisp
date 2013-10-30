@@ -1,1 +1,1 @@
-dists/quicklisp/software/metabang-bind-20120208-git/
+dists/quicklisp/software/metabang-bind-20130128-git/

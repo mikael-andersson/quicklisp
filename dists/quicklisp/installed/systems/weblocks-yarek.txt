@@ -1,1 +1,1 @@
-dists/quicklisp/software/weblocks-20120909-git/contrib/yarek/weblocks-yarek.asd
+dists/quicklisp/software/weblocks-20131003-git/contrib/yarek/weblocks-yarek.asd

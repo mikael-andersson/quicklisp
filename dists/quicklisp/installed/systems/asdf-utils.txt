@@ -1,1 +1,1 @@
-dists/quicklisp/software/asdf-utils-20120909-git/asdf-utils.asd
+dists/quicklisp/software/asdf-utils-20130312-git/asdf-utils.asd

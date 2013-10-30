@@ -1,0 +1,18 @@
+THIS LIBRARY IS BEING DEPRECATED IN FAVOR OF OPTIMA.
+PLEASE USE OPTIMA INSTEAD.
+	https://github.com/m2ym/optima/
+
+I've decided to consolidate pattern matching libraries.
+	http://fare.livejournal.com/169346.html
+Optima is a much better library than fare-matcher,
+which was a proof of concept, really.
+
+I'll be working with the authors of Optima to make sure
+that optima is superior in every possible aspect to fare-matcher,
+and will recommend users who use fare-matcher to migrate to optima.
+
+https://github.com/m2ym/optima
+
+See you there soon!
+
+Faré, 2012-10-24
